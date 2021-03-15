@@ -5,13 +5,43 @@ const pageScroller = document.querySelector('.page__scroller');
 const carousel = document.querySelector('.carousel');
 const offices = document.querySelectorAll('.office__item');
 const specs = document.querySelectorAll('.spec__item');
-const posts = document.querySelectorAll('.blog__item');
+const blogSection = document.querySelector('.post__container');
 const phoneInput = document.querySelector('.telephone__input');
 
 // Insta Auth
-const authLink = 'https://api.instagram.com/oauth/authorize?client_id=248901296885377&redirect_uri=https://seibeaaar.github.io/Avalon/&scope=user_profile,user_media&response_type=code'
-window.addEventListener('load', () => window.location = authLink)
+// const userInfo = {
+//     accessToken: "IGQVJWdEtja0gxa2dUWFlRTTlMVzZAtME9KOXRuZADdUZAnJDOGk1XzlPY1JKdTRBeEo1M3VTcElmZAFVxeDRjcVpiUUlDbl91TFh1X1ZAGdnlpd19seU5aZAVgzVkl2R2UtdXBya1IzVm9n",
+//     userId: 17841403065184612
+// }
 
+const accessToken = '147038277291060|b6f20ec010f1562e33fa7bcc4e6a8aae'
+
+// For now it's hardcoded, in the future urls will be dynamic
+const urls = [
+    'https://www.instagram.com/tv/CMRyvLdlUIG/?utm_source=ig_web_copy_link',
+    'https://www.instagram.com/p/CMO06_dgb9H/?utm_source=ig_web_copy_link',
+    'https://www.instagram.com/tv/CMMPlB4lQNS/?utm_source=ig_web_copy_link'
+]
+
+const getPosts = async () => {
+    const IGPosts = await Promise.all(urls.map(async (url) => {
+        const response = await fetch(`https://graph.facebook.com/v10.0/instagram_oembed?url=${url}&access_token=${accessToken}`);
+        const post = await response.json();
+        return post;
+    }))
+    console.log(IGPosts);
+    IGPosts.forEach(post => {
+        const postItem = document.createElement('div');
+        postItem.innerHTML = post.html;
+        postItem.classList.add('post__item', 'col-lg-4');
+        postItem.style.backgroundImage = `url(${post.thumbnail_url})`;
+        blogSection.insertAdjacentElement('beforeend', postItem);
+    })
+}
+
+getPosts();
+
+const posts = document.querySelectorAll('.post__item');
 // Page scroller
 window.addEventListener('scroll', () => {
     if (window.scrollY > carousel.offsetTop + carousel.offsetHeight) {

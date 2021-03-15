@@ -1,48 +1,13 @@
-.post__photo {
-  position: relative;
+.post__item {
+  margin-right: 12px;
+  background-size: 90%;
 }
 
-.post__date {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  color: #232323;
-  font-size: 13px;
-  background-color: #fff;
-  padding: 5px 15px;
-  border-radius: 3px;
+blockquote {
+  background: rgba(0, 0, 0, 0.5) !important;
+  transition: all ease .4s;
 }
 
-.post__info {
-  padding: 20px 20px 15px;
-}
-
-.post__info h3 {
-  font-size: 20px;
-}
-
-.post__info p {
-  font-size: 15px;
-  line-height: 26px;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.post__info a {
-  font-size: 16px;
-  font-weight: 500;
-  color: #232323;
-  font-family: 'Open Sans', sans-serif;
-}
-
-.post__info a:hover {
-  color: #535353;
-}
-
-.post__meta {
-  margin-bottom: 10px;
-}
-
-.post__meta a {
-  margin-right: 10px;
-  font-size: 14px;
+blockquote:hover {
+  background: rgba(0, 0, 0, 0.7) !important;
 }

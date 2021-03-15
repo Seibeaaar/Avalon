@@ -42,7 +42,6 @@
 }
 
 .nav__item:hover {
-  transform: scale(1.2);
   color: #fff;
 }
 
