@@ -9,7 +9,7 @@ const posts = document.querySelectorAll('.blog__item');
 const phoneInput = document.querySelector('.telephone__input');
 
 // Insta Auth
-const authLink = 'https://api.instagram.com/oauth/authorize?client_id=248901296885377&redirect_uri=http://localhost:3000&scope=user_profile,user_media&response_type=code'
+const authLink = 'https://api.instagram.com/oauth/authorize?client_id=248901296885377&redirect_uri=https://seibeaaar.github.io/Avalon/&scope=user_profile,user_media&response_type=code'
 window.addEventListener('load', () => window.location = authLink)
 
 // Page scroller
