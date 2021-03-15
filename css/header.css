@@ -1,0 +1,25 @@
+.header {
+  background-color: #000;
+  color: #fff;
+  border-bottom: 1px solid #232323;
+  position: relative;
+}
+
+.header__contact, .header__contact:hover {
+  margin-right: 15px;
+  font-family: 'Open Sans', sans-serif;
+  color: #fff;
+}
+
+.header__contact--icon {
+  margin-right: 5px;
+}
+
+.header__social--item {
+  padding: 0 8px;
+  line-height: 40px;
+}
+
+.social__icon {
+  color: #fff;
+}

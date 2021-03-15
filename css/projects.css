@@ -1,0 +1,65 @@
+.project__item {
+  margin-bottom: 30px;
+}
+
+.project__photo {
+  position: relative;
+}
+
+.project__status {
+  position: absolute;
+  padding: 5px 12px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  text-transform: uppercase;
+  font-size: 11px;
+  color: #fff;
+  left: 15px;
+  top: 15px;
+}
+
+.project__review {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.project__price {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+
+.project__rating {
+  font-size: 10px;
+  color: #ffc12b;
+}
+
+.title {
+  padding: 20px 20px 15px;
+}
+
+.title h3 {
+  font-size: 20px;
+}
+
+.title p {
+  font-size: 14px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.detail {
+  border-top: 1px solid #ebebeb;
+}
+
+.detail p {
+  border-right: 1px solid #ebebeb;
+  line-height: 40px;
+  text-align: center;
+  margin: 0;
+}
+
+.detail span:last-child {
+  border-right-color: transparent;
+}

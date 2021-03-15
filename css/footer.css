@@ -1,0 +1,126 @@
+.footer {
+    background-image: url('../assets/img/footer.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    position: relative;
+    z-index: 0;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(31, 33, 37, 0.95);
+}
+
+.footer__inner {
+    position: relative;
+    z-index: 1;
+}
+
+.footer__item {
+    margin-bottom: 60px;
+    color: #c5c5c5;
+}
+
+.footer__item h4 {
+    font-size: 18px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #ececec;
+}
+
+.footer__list {
+    padding: 0;
+}
+
+.footer__list li {
+    padding-left: 25px;
+    position: relative;
+    margin-bottom: 15px;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footer__list i {
+    position: absolute;
+    left: 0;
+    line-height: 22px;
+}
+
+.links {
+    padding-left: 15px;
+}
+
+.links a {
+    font-size: 15px;
+    color: #c5c5c5;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.links a:hover {
+    color: #adabab;
+}
+
+.media img {
+    width: 60px;
+    border-radius: 3px;
+}
+
+.media__info p {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 15px;
+}
+
+.footer__item input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ebebeb;
+    height: 40px;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+}
+
+.footer__submit {
+    width: 100%;
+    background-color: #000;
+    padding: 11px 15px 10px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border: 1px solid #232323;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    transition: all ease .2s;
+}
+
+.footer__submit:hover {
+    background-color: #232323;
+}
+
+.sub__footer {
+    padding: 20px 0;
+    border-top: 2px solid #fff;
+}
+
+.sub__footer--inner {
+    position: relative;
+    z-index: 1;
+}
+
+.copyright {
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #c5c5c5;
+    margin: 0;
+}
+
+.footer__social {
+    margin: 0 3px;
+}

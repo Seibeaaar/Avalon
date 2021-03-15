@@ -1,0 +1,62 @@
+#services, #fields {
+  background-color: #fbfbfb;
+}
+
+.service__item {
+  padding: 40px 20px 60px;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 15px;
+}
+
+.spec__item {
+  height: 100%;
+}
+
+.service__item i {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #232323;
+}
+
+.service__item h5 {
+  font-size: 20px;
+  line-height: 22px;
+  margin: 10px 0 15px;
+}
+
+.service__info {
+  position: relative;
+  bottom: 60px;
+}
+
+.service__item p {
+  line-height: 26px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.service__item a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #232323;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.service__item a:hover {
+  color: #535353;
+}
+
+.read__more {
+  background-color: #232323;
+  padding: 12px 35px 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 15px;
+  border-radius: 3px;
+}
+
+.read__more:hover {
+  background-color: #000;
+  color: #fff;
+}

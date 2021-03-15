@@ -1,0 +1,47 @@
+.office__photo {
+  position: relative;
+  min-height: 300px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.first {
+  background-image: url('../assets/img/office-1.jpg');
+}
+
+.second {
+  background-image: url('../assets/img/office-2.jpg');
+}
+
+.office__social {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+}
+
+.office__social a {
+  margin-bottom: 10px;
+}
+
+.office__info {
+  padding: 0 20px;
+}
+
+.office__info h3 {
+  font-size: 20px;
+}
+
+.office__info h6 {
+  font-size: 12px;
+  margin-bottom: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.office__contacts a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  color: #535353;
+  line-height: 30px;
+}

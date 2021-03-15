@@ -1,0 +1,22 @@
+.filter__title {
+  color: grey;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  margin-bottom: 0;
+  margin-right: 12px;
+}
+
+.filter__option {
+  font-size: 14px;
+  background-color: lightgrey;
+  border-radius: 16px;
+  padding: 5px 10px;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: all ease .5s;
+}
+
+.filter__option:hover, .option__selected {
+  background-color: #333;
+  color: #fff;
+}

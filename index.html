@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/favicon.png"
+      type="image/png"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./assets/fonts/font-awesome/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="./assets/fonts/flaticon/font/flaticon.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Avalon Brokerage</title>
+  </head>
+  <body>
+    <div
+      class="modal__window d-flex flex-column justify-content-center align-items-center"
+    >
+      <form class="modal__form">
+        <div class="form__input">
+          <label for="name">Ім'я</label>
+          <input class="name__input" type="text" id="name" required />
+        </div>
+        <div class="form__input">
+          <label for="phone">Телефон</label>
+          <input class="telephone__input" type="tel" id="phone" required />
+        </div>
+        <div class="form__input">
+          <label for="message">Повідомлення</label>
+          <textarea name="message" id="message" class="message"></textarea>
+        </div>
+        <button type="submit" class="modal__submit">Надіслати</button>
+      </form>
+      <button class="modal__close">
+        <img src="./assets/img/cross.svg" alt="" />
+      </button>
+    </div>
+    <div class="order d-flex align-items-center flex-row-reverse">
+      <div class="order__btn d-flex justify-content-center align-items-center">
+        <i class="flaticon-hotel-building"></i>
+      </div>
+      <ul class="order__options">
+        <li data-value="продаж">Заявка на продаж</li>
+        <li data-value="купівлю">Заявка на купівлю</li>
+      </ul>
+    </div>
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-9 d-flex align-items-center">
+            <a href="tel:0 800 500 055" class="header__contact">
+              <i class="fa fa-phone header__contact--icon"></i>
+              <span>0 800 500 055</span>
+            </a>
+            <a href="mailto:info@avalon.com" class="header__contact">
+              <i class="fa fa-envelope header__contact--icon"></i>
+              <span>info@avalon.com</span>
+            </a>
+            <a href="#" class="header__contact">
+              <i class="fa fa-clock-o header__contact--icon"></i>
+              <span>Пон - Нед: 8:00 - 18:00</span>
+            </a>
+          </div>
+          <div class="col-lg-3">
+            <ul class="header__social d-flex justify-content-end">
+              <li class="header__social--item">
+                <a href="#" class="social__icon facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+              </li>
+              <li class="header__social--item">
+                <a href="#" class="social__icon google">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+    <header class="navigation">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-1">
+            <a href="/" class="logo">
+              <img src="./assets/img/logo.png" alt="Logo" class="logo__img" />
+            </a>
+          </div>
+          <div class="col-lg-11 d-flex align-items-center justify-content-end">
+            <nav class="nav d-flex">
+              <a href="#projects" class="nav__item">Проекти</a>
+              <a href="#specs" class="nav__item">Напрямки роботи</a>
+              <a href="#offices" class="nav__item">Агенти</a>
+              <a href="#services" class="nav__item">Послуги</a>
+              <a href="#blog" class="nav__item">Блог</a>
+              <a href="#contacts" class="nav__item">Контакти</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+        data-bs-interval="7000"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="dark__theme"></div>
+            <img
+              src="./assets/img/slider-1.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="container">
+              <div
+                class="slide__info d-flex flex-column justify-content-center"
+              >
+                <h1 class="animate__animated animate__fadeInUp animate__slow">
+                  Avalon <span>Brokerage</span>
+                </h1>
+                <p class="animate__animated animate__fadeIn">
+                  Брокерська компанія Avalon Brokerage надає брокерські послуги
+                  на ринку житлової та комерційної нерухомості Львова для
+                  корпоративних клієнтів і власників приміщень.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="dark__theme"></div>
+            <img
+              src="./assets/img/slider-2.jpg"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="container">
+              <div
+                class="slide__info d-flex flex-column justify-content-center"
+              >
+                <h1 class="animate__animated animate__fadeInDown animate__slow">
+                  Avalon
+                </h1>
+                <p class="animate__animated animate__fadeIn">
+                  Інвестиційно-девелоперська компанія Avalon – забудовник на
+                  ринку нерухомості Львова. За шість років роботи девелопер
+                  здійснив передачу права власності в таких житлових комплексах:
+                  Avalon Garden, Avalon Comfort, Avalon Lux, Avalon, Avalon
+                  Light, Avalon 2Day, Avalon Zelena, Avalon Up, Avalon Time та
+                  Avalon 37.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <section id="filter">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Пошук за категоріями</h2>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Тип</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">ділянка</div>
+              <div class="filter__option">таунхаус</div>
+              <div class="filter__option">котедж</div>
+              <div class="filter__option">дуплекс</div>
+              <div class="filter__option">квадрекс</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Статус продажів</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">не розпочато</div>
+              <div class="filter__option">бронювання</div>
+              <div class="filter__option">є продаж</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Стіни</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">цегла</div>
+              <div class="filter__option">керамоблок</div>
+              <div class="filter__option">газоблок</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Утеплення</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">мінеральна вата</div>
+              <div class="filter__option">пінопласт</div>
+              <div class="filter__option">пінополістирол</div>
+              <div class="filter__option">базальтова вата</div>
+              <div class="filter__option">склофібробетон</div>
+              <div class="filter__option">термоблок</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Опалення</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">газовий котел</div>
+              <div class="filter__option">твердопаливний котел</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center mb-3">
+            <p class="filter__title">Водопостачання</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">централізоване</div>
+              <div class="filter__option">індивідуальне</div>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <p class="filter__title">Закрита територія</p>
+            <div class="options d-flex flex-wrap">
+              <div class="filter__option">так</div>
+              <div class="filter__option">ні</div>
+              <div class="filter__option">так, під охороною</div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="projects">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Наші пропозиції</h2>
+          </div>
+          <div>
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3">
+                <div class="project__item section__item">
+                  <div class="project__photo">
+                    <div class="project__status">Продаж</div>
+                    <img src="./assets/img/avalon-up.jpg" alt="" />
+                    <div
+                      class="project__review d-flex flex-column align-items-end"
+                    >
+                      <p class="project__price">$178,000</p>
+                      <div class="project__rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project__info">
+                    <div class="title">
+                      <h3>Avalon Up</h3>
+                      <p>
+                        <i
+                          class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                        ></i>
+                        ПР. ЧЕРВОНОЇ КАЛИНИ, 60
+                      </p>
+                    </div>
+                    <div class="detail d-flex">
+                      <p class="col-4">3 Спальні</p>
+                      <p class="col-4">2 Ванни</p>
+                      <p class="col-4">980 м2</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="services">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Послуги</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="section__item service__item">
+                <i class="flaticon-hotel-building"></i>
+                <h5>Продаж</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+                <a href="#">Залишити заявку...</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="section__item service__item">
+                <i class="flaticon-house"></i>
+                <h5>Купівля</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+                <a href="#">Залишити заявку...</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="section__item service__item">
+                <i class="flaticon-office-block"></i>
+                <h5>Здача в оренду</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+                <a href="#">Залишити заявку...</a>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="section__item service__item">
+                <i class="flaticon-call-center-agent"></i>
+                <h5>Підтримка 24/7</h5>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+                  do eiusmod tempor incididunt
+                </p>
+                <a href="#">Залишити заявку...</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="offices">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Наші офіси</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="section__item office__item d-flex">
+                <div class="office__photo col-5 first">
+                  <div class="office__social">
+                    <a href="#" class="social__block facebook__block">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social__block google__block">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="office__info col-7 align-self-center">
+                  <h3>Центр продажу Avalon</h3>
+                  <div class="office__contacts d-flex flex-column">
+                    <a href="">
+                      <i class="fa fa-envelope-o"></i>
+                      info@avalon.com
+                    </a>
+                    <a href="">
+                      <i class="fa fa-phone"></i>
+                      +380800500055
+                    </a>
+                    <a href="">
+                      <i class="fa flaticon-office-block"></i>
+                      вулиця Могильницького, 28
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="section__item office__item d-flex">
+                <div class="office__photo col-5 second">
+                  <div class="office__social">
+                    <a href="#" class="social__block facebook__block">
+                      <i class="fa fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social__block google__block">
+                      <i class="fa fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+                <div class="office__info col-7 align-self-center">
+                  <h3>Центр продажу Avalon Up</h3>
+                  <div class="office__contacts d-flex flex-column">
+                    <a href="">
+                      <i class="fa fa-envelope-o"></i>
+                      info@avalon.com
+                    </a>
+                    <a href="">
+                      <i class="fa fa-phone"></i>
+                      +380800500055
+                    </a>
+                    <a href="">
+                      <i class="fa flaticon-office-block"></i>
+                      пр. Червоної Калини, 60
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="specs">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Напрямки роботи</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="section__item service__item spec__item">
+                <i class="flaticon-hotel-building"></i>
+                <h5>Первинний ринок нерухомості</h5>
+                <div class="spec__info">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt
+                  </p>
+                  <a href="#">Залишити заявку...</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="section__item service__item spec__item">
+                <i class="flaticon-house"></i>
+                <h5>Вторинний ринок нерухомості</h5>
+                <div class="spec__info">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt
+                  </p>
+                  <a href="#">Залишити заявку...</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="section__item service__item spec__item">
+                <i class="flaticon-office-block"></i>
+                <h5>Комерційна і торговельна нерухомість</h5>
+                <div class="spec__info">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt
+                  </p>
+                  <a href="#">Залишити заявку...</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="blog">
+        <div class="container">
+          <div class="section__heading">
+            <h2>Наш блог</h2>
+          </div>
+          <div class="row">
+            <div class="col-lg-4">
+              <div class="section__item blog__item">
+                <div class="post__photo">
+                  <img src="./assets/img/blog-3.jpg" alt="" />
+                  <div class="post__date">16Лют</div>
+                </div>
+                <div class="post__info">
+                  <h3>Find Your Dream Real Estate</h3>
+                  <div class="post__meta">
+                    <a href="">
+                      <i class="fa fa-user"></i>
+                      Admin
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment-o"></i>
+                      27
+                    </a>
+                    <a href="">
+                      <i class="fa fa-heart-o"></i>
+                      634
+                    </a>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                  </p>
+                  <a href="">Залишити заявку</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="section__item blog__item">
+                <div class="post__photo">
+                  <img src="./assets/img/blog-3.jpg" alt="" />
+                  <div class="post__date">16Лют</div>
+                </div>
+                <div class="post__info">
+                  <h3>Find Your Dream Real Estate</h3>
+                  <div class="post__meta">
+                    <a href="">
+                      <i class="fa fa-user"></i>
+                      Admin
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment-o"></i>
+                      27
+                    </a>
+                    <a href="">
+                      <i class="fa fa-heart-o"></i>
+                      634
+                    </a>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                  </p>
+                  <a href="">Залишити заявку</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="section__item blog__item">
+                <div class="post__photo">
+                  <img src="./assets/img/blog-3.jpg" alt="" />
+                  <div class="post__date">16Лют</div>
+                </div>
+                <div class="post__info">
+                  <h3>Find Your Dream Real Estate</h3>
+                  <div class="post__meta">
+                    <a href="">
+                      <i class="fa fa-user"></i>
+                      Admin
+                    </a>
+                    <a href="">
+                      <i class="fa fa-comment-o"></i>
+                      27
+                    </a>
+                    <a href="">
+                      <i class="fa fa-heart-o"></i>
+                      634
+                    </a>
+                  </div>
+                  <p>
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the
+                  </p>
+                  <a href="">Залишити заявку</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="map">
+        <div class="section__heading">
+          <h2>Наші проекти на мапі</h2>
+        </div>
+        <div id="google"></div>
+      </section>
+    </main>
+    <footer class="footer" id="contacts">
+      <div class="container footer__inner">
+        <div class="row">
+          <div class="col-xl-4 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer__item">
+              <h4>Наші контакти</h4>
+              <ul class="footer__list">
+                <li>
+                  <i
+                    class="flaticon-facebook-placeholder-for-locate-places-on-maps"
+                  ></i>
+                  просп. Чорновола, 18
+                </li>
+                <li>
+                  <i class="fa fa-envelope"></i>
+                  info@avalon.com
+                </li>
+                <li>
+                  <i class="fa fa-phone"></i>
+                  0 800 500 055
+                </li>
+                <li>
+                  <i class="fa fa-fax"></i>
+                  +0487 85X6 224
+                </li>
+                <li>
+                  <i class="fa fa-skype"></i>
+                  info@avalon.com
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-5 col-lg-6 col-md-6 col-sm-6">
+            <div class="footer__item">
+              <h4>Корисні посилання</h4>
+              <ul class="footer__list">
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Домашня сторінка
+                  </a>
+                </li>
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Про нас
+                  </a>
+                </li>
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Послуги
+                  </a>
+                </li>
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Контакти
+                  </a>
+                </li>
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Проекти
+                  </a>
+                </li>
+                <li class="links">
+                  <a href="#">
+                    <i class="fa fa-angle-right"></i>
+                    Блог
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6">
+            <div class="footer__item">
+              <h4>Підписуйтесь</h4>
+              <p>
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                qui officia deserunt mollit.
+              </p>
+              <input type="email" placeholder="Електронна пошта" />
+              <button type="submit" class="footer__submit">Надіслати</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub__footer">
+        <div class="sub__footer--inner">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <p class="copyright">
+                  © 2018 Theme Vessel. Trademarks and brands are the property of
+                  their respective owners.
+                </p>
+              </div>
+              <div class="col-lg-4">
+                <div class="social__list d-flex justify-content-end">
+                  <a
+                    href="#"
+                    class="social__block facebook__block footer__social"
+                  >
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a
+                    href="#"
+                    class="social__block google__block footer__social"
+                  >
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <a class="page__scroller animate__animated">
+      <i class="fa fa-chevron-up"></i>
+    </a>
+    <script src="./js/maps.js"></script>
+    <script
+      async
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBy1_aB4wTSW_X86CWzkHwzjiyEOF9wCx4&map_ids=907348377cc32924&callback=initMap"
+    ></script>
+    <script src="https://unpkg.com/imask"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script src="./js/modal.js"></script>
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>
