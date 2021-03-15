@@ -29,11 +29,10 @@ const getPosts = async () => {
         const post = await response.json();
         return post;
     }))
-    console.log(IGPosts);
     IGPosts.forEach(post => {
         const postItem = document.createElement('div');
         postItem.innerHTML = post.html;
-        postItem.classList.add('post__item', 'col-lg-4');
+        postItem.classList.add('post__item', 'col-lg-4', 'col-md-6', 'col-sm-12');
         postItem.style.backgroundImage = `url(${post.thumbnail_url})`;
         blogSection.insertAdjacentElement('beforeend', postItem);
     })

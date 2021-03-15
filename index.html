@@ -74,12 +74,12 @@
           <div class="col-lg-3">
             <ul class="header__social d-flex justify-content-end">
               <li class="header__social--item">
-                <a href="#" class="social__icon facebook">
+                <a href="#" target="_blank" class="social__icon facebook">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li class="header__social--item">
-                <a href="#" class="social__icon google">
+                <a href="https://www.instagram.com/lifestyle_avalon/" target="_blank" class="social__icon google">
                   <i class="fa fa-instagram"></i>
                 </a>
               </li>
@@ -91,12 +91,12 @@
     <header class="navigation">
       <div class="container">
         <div class="row">
-          <div class="col-lg-1">
+          <div class="col-lg-1 col-md-3">
             <a href="/" class="logo">
               <img src="./assets/img/logo.png" alt="Logo" class="logo__img" />
             </a>
           </div>
-          <div class="col-lg-11 d-flex align-items-center justify-content-end">
+          <div class="col-lg-11 d-flex align-items-center justify-content-end d-none d-md-block">
             <nav class="nav d-flex">
               <a href="#projects" class="nav__item">Проекти</a>
               <a href="#specs" class="nav__item">Напрямки роботи</a>
@@ -104,6 +104,23 @@
               <a href="#services" class="nav__item">Послуги</a>
               <a href="#blog" class="nav__item">Блог</a>
               <a href="#contacts" class="nav__item">Контакти</a>
+            </nav>
+          </div>
+          <div class="pos-f-t d-md-none col-md-9 d-flex align-items-center justify-content-end">
+            <div class="navbar-collapse collapse" id="navbarToggleExternalContent">
+              <div class="p-4">
+                <a href="#projects" class="nav__item">Проекти</a>
+                <a href="#specs" class="nav__item">Напрямки роботи</a>
+                <a href="#offices" class="nav__item">Агенти</a>
+                <a href="#services" class="nav__item">Послуги</a>
+                <a href="#blog" class="nav__item">Блог</a>
+                <a href="#contacts" class="nav__item">Контакти</a>
+              </div>
+            </div>
+            <nav class="navbar navbar-dark">
+              <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
             </nav>
           </div>
         </div>
@@ -728,7 +745,7 @@
           <div class="section__heading">
             <h2>Наш блог</h2>
           </div>
-          <div class="post__container d-flex"></div>
+          <div class="post__container d-flex flex-wrap flex-md-nowrap"></div>
         </div>
       </section>
       <section id="map">
@@ -845,7 +862,8 @@
                     <i class="fa fa-facebook"></i>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/lifestyle_avalon/"
+                    target="_blank"
                     class="social__block google__block footer__social"
                   >
                     <i class="fa fa-instagram"></i>

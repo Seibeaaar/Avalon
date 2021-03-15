@@ -7,6 +7,12 @@
   padding: 8px 0;
 }
 
+@media (max-width: 768px) {
+  .navigation .row>* {
+    width: 50% !important;
+  }
+}
+
 .logo__img {
   height: 90px;
   width: 90px;
