@@ -180,7 +180,7 @@ function initMap() {
     ],
   });
 
-  const iconPath = "../assets/img/marker.png";
+  const iconPath = "assets/img/marker.png";
 
   var image = new google.maps.MarkerImage(
     iconPath,
