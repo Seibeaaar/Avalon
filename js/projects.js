@@ -1,7 +1,8 @@
 // For now it's hardcoded, in the future should be fetched from backend
+const projectBackground = document.querySelector('.project__bg');
 const projectWrapper = document.querySelector('.project__list');
 
-const imageRoot = 'assets/img/projects';
+const imageRoot = 'assets/img/projects/';
 const projects = [
     {name: 'Avalon Yard', src: 'Avalon-Yard.jpg', inUse: false},
     {name: 'Avalon Up', src: 'Avalon-Up.jpg', inUse: false},
@@ -19,9 +20,15 @@ const projects = [
     {name: 'New Point by Avalon', src: 'New-Point.jpg', inUse: true}
 ];
 
+projectBackground.style.backgroundImage = `url(${imageRoot + projects[0].src})`;
+
 projects.forEach(project => {
     const listItem = document.createElement('li');
-    listItem.innerHTML = `${project.name} ${project.inUse && '<span class="sticker">Здано</span>'}`;
-    listItem.classList.add('project__item');
+    listItem.setAttribute('data-image', project.src);
+    listItem.innerText = project.name;
+    listItem.innerHTML = `<a href="#" class="project__item">${project.name}</a> ${project.inUse ? '<span class="sticker">Здано</span>' : ''}`;
+    listItem.addEventListener('mouseover', (event) => {
+        projectBackground.style.backgroundImage = `url(${imageRoot + event.currentTarget.dataset.image})`
+    });
     projectWrapper.insertAdjacentElement('beforeend', listItem);
 });
