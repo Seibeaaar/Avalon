@@ -134,6 +134,12 @@ img {
   opacity: 0;
 }
 
+@media (max-width: 768px) {
+  .section__item {
+    margin-bottom: 12px;
+  }
+}
+
 .section__item:hover {
   box-shadow: 0 0 15px rgb(0 0 0 / 10%);
 }
@@ -151,7 +157,7 @@ img {
 .carousel-item img {
   animation-name: scale;
   animation-duration: 10s;
-  animation-fill-mode: forwards; 
+  animation-fill-mode: forwards;
 }
 
 @keyframes scale {
