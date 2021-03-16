@@ -20,6 +20,7 @@ const projects = [
     {name: 'New Point by Avalon', src: 'New-Point.jpg', inUse: true}
 ];
 
+// Default slide displayed
 projectBackground.style.backgroundImage = `url(${imageRoot + projects[0].src})`;
 
 projects.forEach(project => {
@@ -28,7 +29,7 @@ projects.forEach(project => {
     listItem.innerText = project.name;
     listItem.innerHTML = `<a href="#" class="project__item">${project.name}</a> ${project.inUse ? '<span class="sticker">Здано</span>' : ''}`;
     listItem.addEventListener('mouseover', (event) => {
-        projectBackground.style.backgroundImage = `url(${imageRoot + event.currentTarget.dataset.image})`
+        projectBackground.style.backgroundImage = `url(${imageRoot + event.currentTarget.dataset.image})`;
     });
     projectWrapper.insertAdjacentElement('beforeend', listItem);
 });
