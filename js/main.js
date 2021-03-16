@@ -1,4 +1,4 @@
-import { projectAnimation, serviceAnimation, isScrolledTo } from './animations.js';
+import { offerAnimation, serviceAnimation, isScrolledTo } from './animations.js';
 
 // Elements
 const pageScroller = document.querySelector('.page__scroller');
@@ -7,12 +7,6 @@ const offices = document.querySelectorAll('.office__item');
 const specs = document.querySelectorAll('.spec__item');
 const blogSection = document.querySelector('.post__container');
 const phoneInput = document.querySelector('.telephone__input');
-
-// Insta Auth
-// const userInfo = {
-//     accessToken: "IGQVJWdEtja0gxa2dUWFlRTTlMVzZAtME9KOXRuZADdUZAnJDOGk1XzlPY1JKdTRBeEo1M3VTcElmZAFVxeDRjcVpiUUlDbl91TFh1X1ZAGdnlpd19seU5aZAVgzVkl2R2UtdXBya1IzVm9n",
-//     userId: 17841403065184612
-// }
 
 const accessToken = '147038277291060|b6f20ec010f1562e33fa7bcc4e6a8aae'
 
@@ -57,7 +51,7 @@ pageScroller.addEventListener('click', () => window.scrollTo(0, 0));
 
 // Adding animation to elements
 const animationCB = () => {
-    projectAnimation()
+    offerAnimation()
     serviceAnimation()
     offices.forEach((a, i) => {
         a.classList.add('animate__animated')

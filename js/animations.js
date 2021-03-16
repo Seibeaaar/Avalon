@@ -1,10 +1,10 @@
-const projects = document.querySelectorAll('.project__item');
+const offers = document.querySelectorAll('.offer__item');
 const services = document.querySelectorAll('.service__item');
 
 export const isScrolledTo = (elemHeight, elemTop) => window.scrollY >= elemTop - elemHeight;
 
-export const projectAnimation = () => {
-  projects.forEach((p, i) => {
+export const offerAnimation = () => {
+  offers.forEach((p, i) => {
       p.classList.add('animate__animated')
       if (isScrolledTo(p.offsetHeight, p.offsetTop)) {
           if (i % 4 === 0) p.classList.add('animate__fadeInLeft')
